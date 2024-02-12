@@ -1,0 +1,27 @@
+name: Environment Specific Labels
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_to_dev:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: development
+    labels:
+      environment: development
+    steps:
+      - name: Deploy to Development Environment
+        run: echo "Deploying to Development Environment"
+
+  deploy_to_prod:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: production
+    labels:
+      environment: production
+    steps:
+      - name: Deploy to Production Environment
+        run: echo "Deploying to Production Environment"
