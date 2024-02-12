@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENVIRONMENT: development
-    labels:
+      labels:
       environment: development
     steps:
       - name: Deploy to Development Environment
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENVIRONMENT: production
-    labels:
+      labels:
       environment: production
     steps:
       - name: Deploy to Production Environment
